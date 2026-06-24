@@ -1,0 +1,71 @@
+# Project Information
+site_name: Analysis Support Hub
+site_description: Practical methods, tools, and resources to help students overcome common analysis challenges.
+site_author: Juan Carlos Leal González
+
+# Theme Configuration
+theme:
+  name: material
+  language: en
+  palette:
+    # Light mode palette (Slate/Blue-Grey tones)
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode palette
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections      # Sidebar visual grouping
+    - navigation.expand        # Keeps the sidebar menu fully expanded at all times
+    - navigation.top           # Back-to-top dynamic button
+    - content.code.copy        # Quick-copy button for tool blocks
+
+# Persistent Site Navigation Map
+nav:
+  - Home: index.md
+  - Quick Problem Finder: quick-problem-finder.md
+  - Prepare Information:
+      - "1. Incomplete or Unreliable Information": problems/1-incomplete-information.md
+      - "2. Too Much Information": problems/2-too-much-information.md
+      - "3. Information Relevance": problems/3-information-relevance.md
+  - Discover Patterns & Relationships:
+      - "4. Meaningful Patterns": problems/4-meaningful-patterns.md
+      - "5. Relationships Between Variables": problems/5-relationships.md
+      - "6. Information Trustworthiness": problems/6-information-trustworthiness.md
+  - Interpret & Validate Findings:
+      - "7. Observation Meaning": problems/7-observation-meaning.md
+      - "8. Strongest Interpretation": problems/8-strongest-interpretation.md
+      - "9. Supported Findings": problems/9-supported-findings.md
+      - "10. Why Is This Happening": problems/10-why-is-this-happening.md
+  - Develop Conclusions:
+      - "11. Important Findings": problems/11-important-findings.md
+      - "12. Supported Conclusions": problems/12-supported-conclusions.md
+      - "13. Analysis Sufficiency": problems/13-analysis-sufficiency.md
+  - About: about.md
+
+
+# Markdown Extensions
+markdown_extensions:
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences
+  - admonition
+  - toc:
+      toc_depth: 1
+
+# Global plugins configuration
+plugins:
+  - search
+
+extra_css:
+  - assets/css/custom.css
